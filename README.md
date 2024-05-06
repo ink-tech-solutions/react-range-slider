@@ -2,6 +2,8 @@
 
 Let's discover **React Range Slider in less than 2 minutes**.
 
+[Documentation](https://inkdev-react-range-slider.netlify.app)
+
 ## Getting Started
 
 Get started by **installing the package**.
