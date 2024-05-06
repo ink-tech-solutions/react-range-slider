@@ -1,6 +1,6 @@
 {
     "name": "@inkdev/react-range-slider",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "React Range Slider",
     "main": "./dist/index.js",
     "module": "./dist/index.js",

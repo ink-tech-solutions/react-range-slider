@@ -64,3 +64,7 @@ const MyComponent = () => {
 
 export default MyComponent;
 ```
+
+## Contributing
+
+Thank you for considering contributing to our project! Please read our [Contribution Guide](CONTRIBUTING.md) for details on how to get started.
