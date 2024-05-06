@@ -1,4 +1,5 @@
 /node_modules
+/documentation
 /src
 
 .env
