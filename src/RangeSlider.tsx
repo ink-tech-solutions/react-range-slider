@@ -7,11 +7,11 @@ import './main.css';
 export const RangeSlider: React.FC<RangeSliderProps> = ({
     componentWidth = '100%',
     disabled = false,
-    sliderColor = '#C0F',
+    sliderColor = '#77bb41',
     trackBgColor = '#F2F1F1',
     trackBorderColor = '#E7E6E4',
     value,
-    setValue,
+    onChange,
     categoryName,
     max = 10,
     min = 0,
@@ -20,10 +20,6 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({
 }) => {
     const [tooltipStyle, setTooltipStyle] = useState({});
     const rangeInputRef = useRef<null | HTMLInputElement>(null);
-    const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const newValue = parseInt(e.target.value, 10);
-        setValue(newValue);
-    };
     const thumbWidth = '28px';
     const trackBorderRadius = '7px';
     const thumbBorderRadius = '14px';
@@ -87,7 +83,7 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({
                             min={min}
                             max={max}
                             value={value}
-                            onChange={handleOnChange}
+                            onChange={onChange}
                             disabled={disabled}
                         />
                         <div className={`tooltip-container ${tooltipPosition}`} style={tooltipStyle}>

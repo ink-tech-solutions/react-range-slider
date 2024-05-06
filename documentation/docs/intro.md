@@ -1,4 +1,8 @@
-# React Range Slider
+---
+sidebar_position: 1
+---
+
+# Documentation
 
 Let's discover **React Range Slider in less than 2 minutes**.
 

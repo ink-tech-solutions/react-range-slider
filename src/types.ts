@@ -1,3 +1,5 @@
+import { ChangeEventHandler } from 'react';
+
 export interface RangeSliderProps {
     componentWidth?: string;
     disabled?: boolean;
@@ -5,7 +7,7 @@ export interface RangeSliderProps {
     trackBgColor?: string;
     trackBorderColor?: string;
     value: number;
-    setValue: (param: number) => void;
+    onChange: ChangeEventHandler<HTMLInputElement>;
     categoryName?: string;
     max?: number;
     min?: number;

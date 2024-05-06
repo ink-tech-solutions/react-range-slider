@@ -1,0 +1,96 @@
+.main_container {
+    padding: 30px;
+}
+.h1 {
+    font-size: xx-large;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+.h2 {
+    font-size: x-large;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+
+.input {
+}
+.input_dark {
+    background-color: black;
+}
+.settings_container {
+    display: flex;
+    gap: 100px;
+    width: 100%;
+    justify-content: center;
+}
+
+.settings_container label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    width: 50px;
+    font-size: 14px;
+}
+
+.input_group {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.select {
+    font-size: 16px !important;
+}
+
+.category_input {
+    width: 120px;
+}
+
+.output {
+    margin: 30px auto;
+    padding: 40px 20px;
+}
+
+.copy_icon {
+    cursor: pointer;
+}
+
+.code_block {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 200px; /* Set a maximum height for the container */
+    overflow-x: auto; /* Allow horizontal scrolling when content exceeds the maximum width */
+    overflow-y: auto; /* Allow vertical scrolling when content exceeds the maximum height */
+    word-wrap: break-word; /* Wrap long words to prevent overflow */
+    white-space: pre-wrap; /* Preserve white space and wrap lines */
+}
+
+.code_block > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.warning {
+    margin-top: 20px;
+    color: rgb(228, 61, 69);
+}
+
+@media only screen and (max-width: 800px) {
+    .settings_container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .input_group {
+        gap: 25px;
+    }
+}
