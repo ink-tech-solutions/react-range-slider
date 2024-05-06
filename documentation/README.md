@@ -1,41 +1,68 @@
-# Website
+---
+sidebar_position: 1
+---
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+# Documentation
 
-### Installation
+Let's discover **React Range Slider in less than 2 minutes**.
 
-```
-$ yarn
-```
+## Getting Started
 
-### Local Development
+Get started by **installing the package**.
 
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
+```bash
+npm install @inkdev/react-range-slider
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## Props
 
-### Deployment
+| Prop             | Type                                   | Required | Default Value | Description                                    |
+| ---------------- | -------------------------------------- | -------- | ------------- | ---------------------------------------------- |
+| value            | number                                 | Yes      | N/A           | Current value of the slider                    |
+| onChange         | `ChangeEventHandler<HTMLInputElement>` | Yes      | N/A           | Event handler for value change                 |
+| componentWidth   | string                                 | No       | '100%'        | Width of the component                         |
+| disabled         | boolean                                | No       | false         | Whether the component is disabled              |
+| sliderColor      | string                                 | No       | '#77bb41'     | Color of the slider                            |
+| trackBgColor     | string                                 | No       | '#F2F1F1'     | Background color of the track                  |
+| trackBorderColor | string                                 | No       | '#E7E6E4'     | Border color of the track                      |
+| categoryName     | string                                 | No       | N/A           | Category name                                  |
+| max              | number                                 | No       | 10            | Maximum value of the slider                    |
+| min              | number                                 | No       | 0             | Minimum value of the slider                    |
+| tooltipPosition  | 'above' &#124; 'under'                 | No       | 'under'       | Position of the tooltip relative to the slider |
+| labels           | boolean                                | No       | true          | Whether to display labels                      |
 
-Using SSH:
+## Usage
 
+```javascript
+import React from 'react';
+import { RangeSlider, RangeSliderProps } from '@inkdev/react-range-slider';
+import { useState } from 'react';
+
+const MyComponent = () => {
+    const [value, setValue] = useState(0);
+
+    const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newValue = parseInt(e.target.value, 10);
+        setValue(newValue);
+    };
+
+    const sliderProps: RangeSliderProps = {
+        componentWidth: '100%',
+        disabled: false,
+        sliderColor: '#77bb41',
+        trackBgColor: '#F2F1F1',
+        trackBorderColor: '#E7E6E4',
+        value: value,
+        onChange: handleOnChange,
+        categoryName: '',
+        max: 10,
+        min: 0,
+        tooltipPosition: 'under',
+        labels: true,
+    };
+
+    return <RangeSlider {...sliderProps} />;
+};
+
+export default MyComponent;
 ```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
